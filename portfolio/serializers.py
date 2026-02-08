@@ -17,9 +17,18 @@ class CategorySerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class ProjectImageSerializer(serializers.ModelSerializer):
+    image_url = serializers.SerializerMethodField()
+
     class Meta:
         model = ProjectImage
-        fields = ['id', 'image']
+        fields = ['id', 'image_url']
+
+    def get_image_url(self, obj):
+        try:
+            return obj.image.url
+        except:
+            return None
+
 
 class ProjectSerializer(serializers.ModelSerializer):
     creators = CreatorSerializer(many=True, read_only=True)
