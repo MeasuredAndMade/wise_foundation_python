@@ -28,7 +28,9 @@ SECRET_KEY = 'n*epu3=*=jvdcew3g8mmcyjr-*bxi(3)@j=&keo8srtr8gi9()'
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = [
-    '*'
+    'wise-foundation-finally.onrender.com',
+    'localhost',
+    '127.0.0.1',
 ]
 
 # Application definition
