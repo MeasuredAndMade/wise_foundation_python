@@ -44,9 +44,9 @@ class ProjectSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def create(self, validated_data):
-        creator_ids = validated_data.pop('creator_ids')
-        tag_ids = validated_data.pop('tag_ids')
-        category_ids = validated_data.pop('category_ids')
+        creator_ids = validated_data.pop('creator_ids',[])
+        tag_ids = validated_data.pop('tag_ids',[])
+        category_ids = validated_data.pop('category_ids',[])
 
         images = self.context['request'].FILES.getlist('images')
 
