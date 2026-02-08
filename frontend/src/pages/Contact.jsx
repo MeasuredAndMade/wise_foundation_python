@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async'
+import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -7,6 +8,7 @@ const Contact = () => {
         email: '', 
         message: '',
     });
+    const navigate = useNavigate()
 
     const handleChange = (e) => {
         setFormData({
@@ -26,7 +28,7 @@ const Contact = () => {
         });
 
         if(response.ok){
-            alert("Message sent!");
+            navigate('/thank-you');
             setFormData({name: "", email: '', message: ''});
         } else {
             alert('Something went wrong.');

@@ -14,6 +14,7 @@ import PortHome from './components/portfolio/PortHome.jsx'
 import PortfolioCategory from './components/portfolio/PortfolioCategory.jsx'
 import Contact from './pages/Contact.jsx'
 import ProjectDetail from './components/portfolio/ProjectDetail.jsx'
+import ThankYou from './pages/ThankYou.jsx'
 
 function App() {
   const page = location.pathname;
@@ -36,6 +37,7 @@ function App() {
           <Route path=":section" element={<DashboardSection />} />
         </Route>
         <Route path='/admin/login' element={<Login />} />
+        <Route path='/thank-you' element={<ThankYou />} />
       </Routes>
       <Footer />
     </>
