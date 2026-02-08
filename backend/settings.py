@@ -120,12 +120,13 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 #     }
 # }
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.getenv("DATABASE_URL"),
+    'default': dj_database_url.parse(
+        "postgresql://postgres:#Ou714w4n63l89!@db.hwsgybivgbhbihuwmfko.supabase.co:5432/postgres",
         conn_max_age=600,
         ssl_require=True
     )
 }
+
 
 
 # Password validation
