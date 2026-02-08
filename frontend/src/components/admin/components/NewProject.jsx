@@ -92,7 +92,7 @@ const NewProject = () => {
                                 <span className='file-cta has-background-grey-lighter mr-3'>
                                     <span className='file-label has-text-grey-dark'>Choose the images...</span>
                                 </span>
-                                <span className='has-text-grey-dark' style={{ display: 'flex', alignItems: 'center'}}>
+                                <span className='file-name has-text-grey-dark'>
                                     {images.length > 0 ? images.map(img => img.name).join(', ') : ' No Files Selected'}
                                 </span>
                             </label>

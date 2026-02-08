@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './css/style.css'
 import Navbar from './components/Navbar'
 import { Route, Routes } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
 import Home from './pages/Home.jsx'
 import Dashboard from './pages/admin/DashboardLayout'
 import DashboardHome from './components/admin/DashboardHome'
@@ -21,7 +20,7 @@ function App() {
   const isAdminPage = page.startsWith('/admin');
 
   return (
-    <HelmetProvider>
+    <>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -39,7 +38,7 @@ function App() {
         <Route path='/admin/login' element={<Login />} />
       </Routes>
       <Footer />
-    </HelmetProvider>
+    </>
   );
 }
 

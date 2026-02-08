@@ -266,3 +266,8 @@ input::placeholder, textarea::placeholder {
 .project-link { text-decoration: none; color: inherit; } 
 
 .project-link:hover { opacity: 0.9; }
+.project-card-title { 
+    display: -webkit-box; 
+    -webkit-line-clamp: 1; /* number of lines */ 
+    -webkit-box-orient: vertical; 
+    overflow: hidden; }

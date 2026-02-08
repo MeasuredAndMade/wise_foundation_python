@@ -17,13 +17,13 @@ const ProjectCard = ({ project }) => {
     return (
         <div className='card project-card mb-5 project-card has-background-grey-light'>
             <div className='card-image has-background-grey-lighter'>
-                <figure className='image is-16x9'>
-                    <a href={`/project/${project.id}`}><img src={mainImage} alt={project.title} /></a>
+                <figure className='image is-4by3'>
+                    <a href={`/project/${project.id}`}><img src={mainImage} alt={project.title} style={{ width: "100%", height: "100%", objectFit: "cover" }}/></a>
                 </figure>
             </div>
             
             <div className='card-content has-background-grey-light'>
-                <Link to={`/project/${project.id}`} className='title is-4 has-text-grey-dark'>
+                <Link to={`/project/${project.id}`} className='title is-4 has-text-grey-dark project-card-title'>
                     {project.title} 
                 </Link>
                 {project.categories?.length > 0 && (
