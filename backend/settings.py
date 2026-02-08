@@ -119,13 +119,34 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-DATABASES = {
-    'default': dj_database_url.parse(
-        "postgresql://postgres:#Ou714w4n63l89!@db.hwsgybivgbhbihuwmfko.supabase.co:5432/postgres",
-        conn_max_age=600,
-        ssl_require=True
-    )
-}
+# DATABASES = {
+#     'default': dj_database_url.parse(
+#         "postgresql://postgres:#Ou714w4n63l89!@db.hwsgybivgbhbihuwmfko.supabase.co:5432/postgres",
+#         conn_max_age=600,
+#         ssl_require=True
+#     )
+# }
+import os
+import dj_database_url
+
+# Local vs Production database switch
+if os.environ.get("RENDER"):
+    # Production (Render)
+    DATABASES = {
+        'default': dj_database_url.parse(
+            "postgresql://postgres:#Ou714w4n63l89!@db.hwsgybivgbhbihuwmfko.supabase.co:5432/postgres",
+            conn_max_age=600,
+            ssl_require=True
+        )
+    }
+else:
+    # Local development (SQLite)
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 
