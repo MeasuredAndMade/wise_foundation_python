@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    background-color:#f7f6f3 !important;
+}
+
+/* Navigation CSS */
+.navbar, .navbar:hover, a:hover {
+    background-color: transparent !important;
+}
+
+.navbar-menu {
+    max-height: 100%;
+}
+
+.navbar-burger span {
+    color:#2E2E2E
+}
+
+.navbar-item {
+    color:#2e2e2e !important;
+    font-family: 'Playfair', serif;
+    font-size: 1.5rem;
+}
+
+.navbar-item:hover {
+    text-decoration:underline;
+}
+
+.is-active {
+    background-color: #f7f6f3 !important;
+}
+
+/* Footer CSS */
+.footer {
+    background-color: #c9ccd6 !important;
+    font-family: 'Playfair', serif;
+}
+.footer-link{
+    color:#1F2A44 !important;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* HOME CSS */
+/* Hero */
+.home-hero {
+    background-color: #c9ccd6;
+    font-family: 'Playfair', serif;
+}
+
+.title.hero-text, .subtitle.hero-text {
+    color: #1F2A44;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.title-hr {
+    width: 50%;
+}
+
+.cta-button {
+    background-color: #6f8f7b !important;
+    color: #F7f6fe !important;
+}
+.cta-button:hover {
+    background-color: #5e7a68 !important;
+    color: #F7f6fe !important;
+}
+/* Multi */
+.service-title {
+    color: #1F2A44 !important;
+    font-family: "Playfair", serif;
+    /* text-decoration: underline; */
+    font-weight: bold;
+}
+.service-box {
+    border:1px solid #c9ccd6;
+    height: 200px;
+}
+
+.service-descrip {
+    color: #1f2a44 !important;
+}
+
+.services-hr {
+    border: 0;
+    height: 2px;
+    background-color: #c9ccd6;
+}
+
+.about-link{
+    color:#1F2A44 !important;
+}
+
+.about-link:hover {
+    text-decoration: underline;
+}
+
+.blog-excerpt {
+    color: #2e2e2e;
+}
+
+@media screen and (max-width: 768px){
+    .extra-mobile{
+        margin-top: 20rem;
+    }
+}
+/* About Css */
+.about-hero {
+    background-image: url('../assets/aboutus.png');
+    background-size: cover;
+    height:250px;
+}
+
+.slight-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.about-hero-text {
+    color: #263046 !important;
+    font-weight: 700;
+}
+
+.textarea-width {
+    width: 100%;
+}
+input::placeholder, textarea::placeholder {
+    color:#1f2a44 !important;
+    font-family: 'Playfair Display', serif;
+}
+
+.contact-button {
+    width: 100%;
+    font-size: 1.25rem !important;
+}
+
+.contact-text {
+    color: #1f2a44  !important;
+    font-family: 'Playfair Display', serif;
+}
+
+.contact-text-softer {
+    color: #4a5a78  !important;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.5 !important;
+}
+
+.story-title{
+    color: #1F2A44 !important;
+    font-family: "Playfair", serif;
+    text-decoration: underline;
+}
+
+.story-text{
+    color: #1F2A44;
+}
+
+.story-mission {
+    border: 1px solid #c9ccd6;
+}
+.team-title {
+    color: #1F2A44 !important;
+}
+
+.card-bg {
+    background-color: #ccc !important;
+}
+
+.content-text {
+    color: #1F2A44;
+}
+
+.value-title {
+    color: #1f2a44 !important;
+}
+
+/* Portfolio Css */
+.about-hero {
+    background-image: url('../assets/aboutus.png');
+    background-size: cover;
+    height:250px;
+}
+
+.slight-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.about-hero-text {
+    color: #263046 !important;
+    font-weight: 700;
+}
+
+.project-title {
+    color: #1f2a44 !important;
+}
+
+.port-titles {
+    font-family: 'Playfair Display', serif;
+    color: #1f2a44 !important;
+}
+
+.port-hero {
+    height: 300px
+}
+
+.featured-title {
+    color: #1f2a44 !important;
+}
+
+/* Contact Css */
+.textarea-width {
+    width: 100%;
+}
+input::placeholder, textarea::placeholder {
+    color:#1f2a44 !important;
+    font-family: 'Playfair Display', serif;
+}
+.contact-button {
+    width: 100%;
+    font-size: 1.25rem !important;
+}
+
+.contact-text {
+    color: #1f2a44  !important;
+    font-family: 'Playfair Display', serif;
+}
+
+.contact-text-softer {
+    color: #4a5a78  !important;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.5 !important;
+}
+.input-box {
+    color: #1f2a44 !important;
+}
+.input-link, .input-text, .category-link {
+    color:#1f2a44 !important;
+}
+.input-link:hover, .category-link:hover{
+    text-decoration: underline;
+}
+
+.project_card {
+    max-width: 420px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.project-link { text-decoration: none; color: inherit; } 
+
+.project-link:hover { opacity: 0.9; }
