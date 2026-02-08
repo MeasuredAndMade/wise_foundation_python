@@ -29,13 +29,13 @@ class ProjectSerializer(serializers.ModelSerializer):
 
     # Accepts IDs on write
     creator_ids = serializers.PrimaryKeyRelatedField(
-        many=True, queryset=Creator.objects.all(), write_only=True
+        many=True, queryset=Creator.objects.all(), write_only=True, required=False
     )
     tag_ids = serializers.PrimaryKeyRelatedField(
-        many=True, queryset=Tag.objects.all(), write_only=True
+        many=True, queryset=Tag.objects.all(), write_only=True, required=False
     )
     category_ids = serializers.PrimaryKeyRelatedField(
-        many=True, queryset=Category.objects.all(), write_only=True
+        many=True, queryset=Category.objects.all(), write_only=True, required=False
     )
 
 
